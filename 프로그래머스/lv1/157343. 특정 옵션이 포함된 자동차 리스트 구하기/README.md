@@ -111,4 +111,13 @@ Empty
 </tbody>
       </table>
 
+### 풀이 
+      
+``` sql
+SELECT CAR_ID , CAR_TYPE , DAILY_FEE , OPTIONS
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE OPTIONS LIKE "%네비게이션%"
+ORDER BY CAR_ID DESC
+```
+
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
