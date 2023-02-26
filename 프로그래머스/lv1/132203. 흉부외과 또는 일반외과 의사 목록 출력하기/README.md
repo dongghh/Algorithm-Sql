@@ -1,4 +1,4 @@
-# [unrated] 흉부외과 또는 일반외과 의사 목록 출력하기 - 132203 
+# [level 1] 흉부외과 또는 일반외과 의사 목록 출력하기 - 132203 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/132203) 
 
@@ -211,6 +211,15 @@ Empty
 <h5>주의사항</h5>
 
 <p>날짜 포맷은 예시와 동일하게 나와야합니다.</p>
+
+### 풀이 
+
+``` sql
+SELECT DR_NAME , DR_ID ,MCDP_CD ,DATE_FORMAT(HIRE_YMD,"%Y-%m-%d") AS HIRE_YMD
+FROM DOCTOR
+WHERE MCDP_CD="CS" OR MCDP_CD="GS"
+ORDER BY HIRE_YMD DESC , DR_NAME
+```
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
