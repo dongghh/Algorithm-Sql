@@ -143,5 +143,18 @@ Empty
 
 <p><code>START_DATE</code>와 <code>END_DATE</code>의 경우 예시의 데이트 포맷과 동일해야 정답처리 됩니다.</p>
 
+### 풀이 
+
+``` sql
+SELECT 
+HISTORY_ID ,CAR_ID,
+DATE_FORMAT(START_DATE,"%Y-%m-%d") AS START_DATE,
+DATE_FORMAT(END_DATE,"%Y-%m-%d") AS END_DATE,
+IF(DATEDIFF(END_DATE,START_DATE)>=29,"장기 대여","단기 대여")RENT_TYPE
+FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+WHERE DATE_FORMAT(START_DATE,"%Y-%m") LIKE "2022-09"
+ORDER BY HISTORY_ID DESC
+```
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
