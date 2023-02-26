@@ -1,4 +1,4 @@
-# [unrated] 조건에 맞는 도서 리스트 출력하기 - 144853 
+# [level 1] 조건에 맞는 도서 리스트 출력하기 - 144853 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/144853) 
 
@@ -156,6 +156,15 @@ Empty
 <h5>주의사항</h5>
 
 <p><code>PUBLISHED_DATE</code>의 데이트 포맷이 예시와 동일해야 정답처리 됩니다.</p>
+
+### 풀이 
+
+``` sql
+SELECT BOOK_ID ,  DATE_FORMAT(PUBLISHED_DATE,"%Y-%m-%d") AS PUBLISHED_DATE
+FROM BOOK
+WHERE PUBLISHED_DATE LIKE "2021%" AND CATEGORY = "인문"
+ORDER BY PUBLISHED_DATE
+```
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
