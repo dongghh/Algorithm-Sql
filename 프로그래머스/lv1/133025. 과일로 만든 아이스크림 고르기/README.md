@@ -1,4 +1,4 @@
-# [unrated] 과일로 만든 아이스크림 고르기 - 133025 
+# [level 1] 과일로 만든 아이스크림 고르기 - 133025 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/133025) 
 
@@ -212,5 +212,13 @@ Empty
 </tr>
 </tbody>
       </table>
+      
+### 풀이 
+
+``` sql
+SELECT B.FLAVOR AS FLAOVR FROM FIRST_HALF AS A, ICECREAM_INFO AS B 
+WHERE A.FLAVOR = B.FLAVOR AND A.TOTAL_ORDER > 3000 AND B.INGREDIENT_TYPE = "fruit_based"
+ORDER BY A.TOTAL_ORDER DESC
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
