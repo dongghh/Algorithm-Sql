@@ -1,4 +1,4 @@
-# [unrated] 인기있는 아이스크림 - 133024 
+# [level 1] 인기있는 아이스크림 - 133024 
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/133024) 
 
@@ -165,5 +165,13 @@ Empty
 </tr>
 </tbody>
       </table>
+      
+### 풀이 
+
+``` sql
+SELECT FLAVOR
+FROM FIRST_HALF
+ORDER BY TOTAL_ORDER DESC , SHIPMENT_ID
+```
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
