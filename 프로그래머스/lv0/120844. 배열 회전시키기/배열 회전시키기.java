@@ -3,16 +3,14 @@ class Solution {
         int[] answer = new int[numbers.length];
         
         if(direction.equals("right")){
-            int r = numbers[numbers.length-1];
-            answer[0] = r;
+            answer[0] = numbers[numbers.length-1];
             
             for(int i = 1 , j = 0; i<numbers.length; i++){
                 answer[i] = numbers[j];
                 j++;
             }
         }else{
-            int l = numbers[0];
-            answer[numbers.length-1] = l;
+            answer[numbers.length-1] = numbers[0];
             
             for(int i = 0, j = 1; i<numbers.length-1; i++){
                 answer[i] = numbers[j];
